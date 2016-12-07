@@ -24,7 +24,6 @@ struct ListNode* swapPairs(struct ListNode* head) {
 	struct ListNode* p = headp;
 	head = p->next->next;
 	while (p && p->next && p->next->next) {
-	    
 		struct ListNode* tmp = p->next->next;
 		p->next->next = p->next->next->next;
 		tmp->next = p->next;
