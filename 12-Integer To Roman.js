@@ -17,16 +17,8 @@ var intToRoman = function(num) {
 	t = Math.floor( num % 1000 % 500 % 100 % 50 / 10 );
 	a5 = Math.floor( num % 1000 % 500 % 100 % 50 % 10 / 5 );
 	a = Math.floor( num % 1000 % 500 % 100 % 50 % 10 % 5 );
-    console.log(k)
-    console.log(h5)
-    console.log(h)
-    console.log(t5)
-    console.log(t)
-    console.log(a5)
-    console.log(a)
-	res = 'M'.repeat(k)
+	return 'M'.repeat(k)
 		 + ( (h5 == 1 && h == 4) ? "CM" : ((h == 4) ? "CD" : ('D'.repeat(h5) + 'C'.repeat(h))) )
 		  + ( (t5 == 1 && t == 4) ? "XC" : ((t == 4) ? "XL" : ('L'.repeat(t5) + 'X'.repeat(t))) )
 		   + ( (a5 == 1 && a == 4) ? "IX" : ((a == 4) ? "IV" : ('V'.repeat(a5) + 'I'.repeat(a))) );
-	return res;
 };
