@@ -32,11 +32,9 @@ function reversee(s) {
 	return o;
 }
 var reverse = function(x) {
-    console.log(typeof(x))
     res = parseInt(reversee(x.toString()));
     if(res > 2147483647){
         return 0;
     }
     return (x < 0) ? res * (-1) : res;
 };
-/* beats 56% */
