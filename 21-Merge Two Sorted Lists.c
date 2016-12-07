@@ -39,7 +39,6 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
 			p1 = p1->next;
 		}
 	}
-// 	printf("%d %d",p1->next == NULL, p2->next == NULL);
 	if(p1 && p1->next == NULL){
 		p1->next = p2;
 	}
