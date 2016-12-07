@@ -24,9 +24,6 @@ struct Node
 };
 
 bool isValid(char* s) {
-    // if(!s[1]){
-    //     return false;
-    // }
 	Stack S = Create();
 	for (int i = 0; s[i] != 0; ++i)
 	{
