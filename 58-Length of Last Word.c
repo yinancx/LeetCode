@@ -27,6 +27,5 @@ int lengthOfLastWord(char* s) {
             break;
         }
     }
-    // printf("%d %d",end,begin);
     return end - begin;
 }
