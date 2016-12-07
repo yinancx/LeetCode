@@ -23,25 +23,13 @@ var threeSumClosest = function(nums, target) {
 		}
 		nums[j] = Tmp;
 	}
-	console.log(nums)
 	var mid = 0;
-	// 	for(var i = 0, t = Math.abs(nums[0] - target); i < len; ++i){
-	// 		mid = ((x = Math.abs(nums[i] - target)) < Math.abs(nums[mid] - target)) ? i : mid;
-	// 		if(x <= t){
-	// 			t = x;
-	// 		}
-	// 		else{
-	// 			break;
-	// 		}
-	// 	}
 	for (var i = 0, t = Math.abs(nums[0] - target); i < len; ++i) {
 		mid = (Math.abs(nums[i] - target) <= Math.abs(nums[mid] - target)) ? i : mid;
 	}
-	console.log("mid" + mid);
 	if (mid === 0) {
-// 		return nums[0] + nums[1] + nums[2];
-        mid = 1;
-        		var res = nums[0] + nums[mid] + nums[len - 1];
+        	mid = 1;
+        	var res = nums[0] + nums[mid] + nums[len - 1];
 	} 
 	else {
 		if (mid === len - 1) {
@@ -49,17 +37,13 @@ var threeSumClosest = function(nums, target) {
 		}
 		var res = nums[0] + nums[mid] + nums[len - 1];
 	}
-		// 	console.log(res)
 	for (var i = 0; i < mid; ++i) {
 		for (var j = len - 1; j > i; --j) {
 			for (var k = i + 1; k < j; ++k) {
-				// console.log(Math.abs(nums[i] + nums[k] + nums[j] - target));
-				// console.log(Math.abs(res - target));
 				if ((sum = nums[i] + nums[k] + nums[j]) === target) {
 					return target;
 				} 
 				else {
-				    // console.log(i + " " + k + " " + j + " " + sum);
 					res = (Math.abs(sum - target) < Math.abs(res - target)) ? sum : res;
 				}
 			}
