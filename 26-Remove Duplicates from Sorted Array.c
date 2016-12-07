@@ -48,5 +48,4 @@ int removeDuplicates(int* nums, int numsSize) {
 	    }
 	    return count;
 	}
-//  return numsSize/2;
 }
