@@ -17,8 +17,6 @@ Note: All inputs will be in lower-case.
  * @return {string[][]}
  */
 function isEqual(a, b){
-    // console.log(a)
-    // console.log(b)
     for(var i = 0; i < 25; ++i){
         if(a[i] !== b[i]){
             return false;
@@ -40,9 +38,7 @@ var groupAnagrams = function(strs) {
             lenhash[strs[i].length] = [];
         }
         lenhash[strs[i].length].push(i);
-        // hash[i][26] = strs[i].length;
     }
-// console.log(lenhash)
     for (var k = 0, n = 0; k < lenhash.length; ++k) {
         if (lenhash[k]) {
             for (var l = 0; l < lenhash[k].length; ++l) {
@@ -52,7 +48,6 @@ var groupAnagrams = function(strs) {
                 res[n++] = [];
                 res[n - 1].push(strs[ lenhash[k][l] ]);
                 for(var m = l + 1; m < lenhash[k].length; ++m){
-                    // console.log(lenhash[k])
                     if(strs[ lenhash[k][m] ] !== "0" && isEqual( hash[ lenhash[k][m] ], hash[ lenhash[k][l] ] )) {
                         res[n - 1].push(strs[ lenhash[k][m] ]);
                         strs[ lenhash[k][m] ] = "0";
