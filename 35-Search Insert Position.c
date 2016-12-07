@@ -10,7 +10,7 @@ Here are few examples.
 [1,3,5,6], 7 → 4
 [1,3,5,6], 0 → 0
 */
-
+ 
 int searchInsert(int* nums, int numsSize, int target) {
     if(numsSize == 0 || numsSize == 1 || nums[0] > target || nums[numsSize - 1] < target){
         if(numsSize == 0){
