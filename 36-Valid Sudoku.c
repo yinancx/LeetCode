@@ -19,7 +19,6 @@ bool block(char** board, int str, int stc, int* hash) {
 					for (int i = 0; i < 10; ++i) {
 						hash[i] = 0;
 					}
-					printf("%d\n", c );
 					return false;
 				}
 				else {
@@ -67,14 +66,11 @@ bool isValidSudoku(char** board, int boardRowSize, int boardColSize) {
 			hash[i] = 0;
 		}
 	}
-	printf("f");
 	for (int i = 0; i <= 6; i += 3) {
 		for (int j = 0; j <= 6; j += 3) {
 			if (!block(board, i, j, hash)) {
-				printf("%d %d", i, j);
 				return false;
 			}
-// 			printf("u");
 		}
 	}
 	return true;
