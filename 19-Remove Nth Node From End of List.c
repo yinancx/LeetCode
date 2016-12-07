@@ -39,13 +39,11 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
  	for(int i = 0; i < n - 1 && end->next != NULL; ++i){
  		end = end->next;
  		count++;
- 		printf("%d ",end->val);
  	}
  	while(end->next != NULL){
  		back = back->next;
  		end = end->next;
  		count++;
- 		printf("off");
  	}
  	if(n == count){
  	    return res = res->next;
