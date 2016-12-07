@@ -19,6 +19,5 @@ var strStr = function(haystack, needle) {
     while(i < haystack.length && haystack.substr(i, len) != needle){
         ++i;
     }
-        
     return (i == haystack.length) ? -1 : i;
 };
