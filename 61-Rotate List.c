@@ -23,7 +23,6 @@ struct ListNode* rotateRight(struct ListNode* head, int k) {
         end = end->next;
         count++;
     }
-    printf("%d",count);
     tmp = end;
     end->next = head;
     end = head;
