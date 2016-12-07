@@ -46,9 +46,6 @@ var threeSum = function(nums) {
 		}
 	}
 	mid -= Math.floor(count / 2);
-	console.log(nums)
-	console.log(mid)
-	console.log(count)
 	j = 0;
 	for (i = 0; i < mid || (i === mid && j !== mid); ++i) {
 		while (nums[i - 1] && nums[i] === nums[i - 1]) {
@@ -72,7 +69,6 @@ var threeSum = function(nums) {
 						if (!(res[t - 1] && (res[t - 1][0] === nums[i] && res[t - 1][2] === nums[j])) && k - 1 !== i && k - 1 !== j) {
 							res[t++] = [nums[i], nums[k - 1], nums[j]];
 						}
-						// nums[k - 1] = dif;
 						break;
 					}
 				}
@@ -83,7 +79,6 @@ var threeSum = function(nums) {
 						if (!(res[t - 1] && (res[t - 1][0] === nums[i] && res[t - 1][2] === nums[j])) && k + 1 !== i && k + 1 !== j) {
 							res[t++] = [nums[i], nums[k + 1], nums[j]];
 						}
-						// nums[k + 1] = dif;
 						break;
 					}
 				}
@@ -95,7 +90,6 @@ var threeSum = function(nums) {
 						console.log(count)
 						res[t++] = [nums[i], nums[mid + 1], nums[j]];
 					}
-					// nums[mid] = dif;
 				}
 			}
 		}
