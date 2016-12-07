@@ -44,9 +44,7 @@ var fourSum = function(nums, target) {
 		}
 		nums[j] = Tmp;
 	}
-	console.log(nums)
 	var hash = new Array(200000000);
-// 	console.log(hash[0]
 	for (var i = 0, j = len - 1; nums[i] < 0 || nums[j] >= 0; ++i, --j) {
 		if (nums[i] < 0) {
 			hash[-nums[i]] = hash[-nums[i]] === undefined ? 1 : (hash[-nums[i]] + 1);
@@ -55,8 +53,6 @@ var fourSum = function(nums, target) {
 			hash[100000000 + nums[j]] = hash[100000000 + nums[j]] === undefined ? 1 : (hash[100000000 + nums[j]] + 1);
 		}
 	}
-// 	console.log(hash[5] + " " + hash[4] + " " + hash[1001])
-// console.log(!hash[1200])
 	var trisum = [];
 	var table = [];
 	for (var i = 0, n = 0, lasti = undefined; i < len - 2; ++i) {
@@ -77,7 +73,6 @@ var fourSum = function(nums, target) {
 				if (dif <= -100000000 || dif >= 100000000 || !hash[difhs]) {
 					continue;
 				}
-				// console.log(nums[i] + " " + nums[j] + " " + nums[k] + " " + dif)
 				if (dif == nums[i] || dif == nums[j] || dif == nums[k]) {
 					tmp = hash[difhs];
 					if(nums[i] == dif){
@@ -95,7 +90,6 @@ var fourSum = function(nums, target) {
 				}
 				
 				sum = place(nums[i], nums[j], nums[k], dif);
-				// console.log(sum.toString())
 				for(var m = 0; m < n; ++m){
 					if(table[m] === sum.toString()){
 						flag = 1;
@@ -112,6 +106,5 @@ var fourSum = function(nums, target) {
 		}
 		lasti = nums[i];
 	}
-// 	console.log(table)
 	return trisum;
 };
