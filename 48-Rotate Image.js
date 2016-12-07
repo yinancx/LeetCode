@@ -24,6 +24,5 @@ var rotate = function(matrix) {
             matrix[len - i - 1 - j][i] = tmp2;
             matrix[i][i + j] = tmp3;
         }
-        // console.log(matrix);
     }
 };
